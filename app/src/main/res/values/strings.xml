@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+
+
+    <string name="server_api_key">"e7c2f41f4e030767ca9a04daa7f59870"</string>
+    <string name="title_activity_movie_details">MovieDetails</string>
+    <string name="button_reviews">Reviews</string>
+    <string name="button_trailer">Trailer</string>
+    <string name="action_sort_popularity">Most Popular</string>
+    <string name="action_sort_user_rating">Most Rated</string>
+    <string name="action_get_favorite">Favorite</string>
+    <string name="dialog_progress_title">wait</string>
+    <string name="dialog_progress_message"> loading</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="server_base_url">http://api.themoviedb.org/3/discover/movie</string>
+    <string name="trailer_url">http://api.themoviedb.org/3/movie</string>
+
+
+</resources>
