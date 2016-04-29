@@ -29,6 +29,9 @@
         <activity
             android:name="com.example.ahmed.popularmovies.trailers.TrailersActivity"
             android:label="Movie Trailers"/>
+        <activity
+            android:name="com.example.ahmed.popularmovies.reviews.ReviewsActivity"
+            android:label="Reviews Activity"/>
 
     </application>
 

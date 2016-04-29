@@ -14,6 +14,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.ahmed.popularmovies.DataBase.FavoriteMovies;
+import com.example.ahmed.popularmovies.reviews.ReviewsActivity;
+import com.example.ahmed.popularmovies.reviews.ReviewsFragment;
 import com.example.ahmed.popularmovies.trailers.TrailersActivity;
 import com.example.ahmed.popularmovies.trailers.TrailersFragment;
 import com.squareup.picasso.Picasso;
@@ -88,6 +90,7 @@ public class MovieDetailsFragment extends Fragment {
             ImageView imageView = (ImageView) rootView.findViewById(R.id.movie_poster);
             Picasso.with(getActivity()).load(movie.getPosterUrl()).error(R.drawable.error).into(imageView);
 
+
             rootView.findViewById(R.id.movie_trailers).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -103,6 +106,24 @@ public class MovieDetailsFragment extends Fragment {
                     }
                 }
             });
+
+
+            rootView.findViewById(R.id.movie_reviews).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if (getActivity().findViewById(R.id.fragment_details) != null) {
+                        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+                        Fragment fragment = ReviewsFragment.newInstance(movie.getId());
+                        fragmentManager.beginTransaction().add(R.id.fragment_details, fragment).commit();
+                    }
+                    else {
+                        Intent intent = new Intent(getActivity(), ReviewsActivity.class);
+                        intent.putExtra("extra_movie_id", movie.getId());
+                        startActivity(intent);
+                    }
+                }
+            });
+
 
 
             return rootView;

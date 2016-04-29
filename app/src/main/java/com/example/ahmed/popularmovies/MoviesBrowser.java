@@ -85,6 +85,9 @@ public class MoviesBrowser extends AppCompatActivity {
                         Fragment fragment = MovieDetailsFragment.newInstance(movie);
                         fragmentManager.beginTransaction().add(R.id.fragment_details, fragment).commit();
 
+
+
+
                     } else {
 
 
